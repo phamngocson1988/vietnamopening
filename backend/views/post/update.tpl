@@ -138,7 +138,7 @@
 	    <div class="x_content">
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12">
-            <a href="javasciprt:void(0)" style="position: absolute;" role="button" action="delete-avatar"><i class="fa fa-times"></i></a>
+            <a href="javasciprt:void(0)" style="position: absolute;" role="button" action="delete-image"><i class="fa fa-times"></i></a>
             <img role="button" class="img-responsive img-thumbnail" src="{$model->getPost()->getAvatarUrl('150x150')}" alt="image" width="300px" height="300px" id="image-avatar" />
             <input type="file" name="imageFiles" id="image-file" style="display: none">
             {$form->field($model, 'avatar', ['inputOptions' => ['id' => 'avatar']])->hiddenInput()->label(false)}
@@ -239,11 +239,6 @@ upload.callback = function(result) {
 
 $("a[action='delete-image']").on('click', function() {
   $(this).closest('div').remove();
-});
-
-$("a[action='delete-avatar']").on('click', function() {
-  $(this).closest('div').find('img').attr('src', '../../images/image-placeholder.png');
-  $('#avatar').val('');
-});
+})
 {/literal}
 {/registerJs}

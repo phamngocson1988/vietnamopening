@@ -59,7 +59,6 @@
       <div class="x_content">
         <div class="row" id="feature-images-container">
           <div class="col-md-3 col-sm-12 col-xs-12">
-            <a href="javasciprt:void(0)" style="position: absolute;" role="button" action="delete-image"><i class="fa fa-times"></i></a>
             <img role="button" class="img-responsive img-thumbnail" src="../../images/image-placeholder.png" alt="image" width="300px" height="300px" id="add-feature-images"/>
             <input type="file" name="feature-images[]" id="feature-images" multiple style="display: none">
           </div>
@@ -128,7 +127,6 @@
 	    <div class="x_content">
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12">
-            <a href="javasciprt:void(0)" style="position: absolute;" role="button" action="delete-avatar"><i class="fa fa-times"></i></a>
             <img role="button" class="img-responsive img-thumbnail" src="../../images/image-placeholder.png" alt="image" width="300px" height="300px" id="image-avatar" />
             <input type="file" name="imageFiles" id="image-file" style="display: none">
             {$form->field($model, 'avatar_id', ['inputOptions' => ['id' => 'avatar']])->hiddenInput()->label(false)}
@@ -206,7 +204,6 @@ images.callback = function(result) {
   $.each(result.images, function( index, img ) {
     // pre-append image
     html += '<div class="col-md-3 col-sm-12 col-xs-12">';
-    html += '<a href="#" style="position: absolute;"><i class="fa fa-times"></i></a>';
     html += '<img role="button" class="img-responsive img-thumbnail" src="'+img.thumb+'" alt="image" width="300px" height="300px"/>';
     html += '<input type="hidden" name="InsertPostForm[image][]" style="display: none" value="'+img.id+'">';
     html += '</div>';
@@ -227,13 +224,9 @@ upload.callback = function(result) {
   });
 }
 
-$("a[action='delete-image']").on('click', function() {
-  $(this).closest('div').remove();
-});
+console.log(images);
 
-$("a[action='delete-avatar']").on('click', function() {
-  $(this).closest('div').find('img').attr('src', '../../images/image-placeholder.png');
-  $('#avatar').val('');
-});
+
+console.log(upload);
 {/literal}
 {/registerJs}
