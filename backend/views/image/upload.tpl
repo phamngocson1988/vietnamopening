@@ -1,10 +1,4 @@
 {use class='yii\widgets\ActiveForm' type='block'}
-<div class="page-title">
-  <div class="title_left">
-    <h3>Form Upload </h3>
-  </div>
-</div>
-
 <div class="clearfix"></div>
 
 <div class="row">

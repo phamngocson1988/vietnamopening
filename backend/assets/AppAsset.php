@@ -16,6 +16,7 @@ class AppAsset extends AssetBundle
         'vendors/nprogress/nprogress.css',
         'vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css',
         'css/custom.min.css',
+        'css/style.css',
         // ['css/ace.min.css', 'class' => 'ace-main-stylesheet', 'id' => 'main-ace-style'],
         // ['css/ace-part2.min.css', 'condition' => 'lte IE 9', 'class' => 'ace-main-stylesheet'],
         // ['css/css/ace-ie.min.css', 'condition' => 'lte IE 9'],
@@ -24,7 +25,8 @@ class AppAsset extends AssetBundle
         'vendors/fastclick/lib/fastclick.js',
         'vendors/nprogress/nprogress.js',
         'vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
-        'js/custom.min.js'
+        'js/custom.min.js',
+        'js/function.js',
         // ['js/ace-extra.min.js', 'position' => View::POS_HEAD, 'depends' => null],
         // ['js/html5shiv.min.js', 'condition' => 'lte IE 8', 'position' => View::POS_HEAD, 'depends' => null],
         // ['js/respond.min.js', 'condition' => 'lte IE 8', 'position' => View::POS_HEAD, 'depends' => null],

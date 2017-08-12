@@ -2,12 +2,11 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\web\Controller;
+use common\components\override\Controller;
 use yii\filters\AccessControl;
 use common\forms\FetchLocationForm;
-use common\forms\ChangeVisibleLocationForm;
-use yii\data\Pagination;
-use yii\web\Response;
+use backend\forms\CreateLocationForm;
+use backend\forms\EditLocationForm;
 
 /**
  * LocationController
@@ -32,10 +31,12 @@ class LocationController extends Controller
         ];
     }
 
+    /**
+     * Show the list of posts
+     */
     public function actionIndex()
     {
         $request = Yii::$app->request;
-
         $form = new FetchLocationForm();
         $models = $form->fetch();
         return $this->render('index.tpl', [
@@ -43,21 +44,54 @@ class LocationController extends Controller
         ]);
     }
 
-    public function actionChangeVisible($id)
+    public function actionEdit($id)
     {
-        $request = Yii::$app->request;
-        if (!$request->isAjax) {
-            return;
-        }
-        
-        $visible = $request->get('visible', 1);
-        $model = new ChangeVisibleLocationForm(['id' => $id, 'visible' => $visible]);
-        if ($model->change()) {
-            $result['status'] = true;
+        $model = new EditLocationForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->save()) {
+                $this->redirect(['location/index']);
+            }
         } else {
-            $result['status'] = false;
+            $model->loadData($id);
         }
-        Yii::$app->response->format = Response::FORMAT_JSON;
-        return $result;
+
+        $this->view->registerJsFile(
+            'vendors/iCheck/icheck.min.js',
+            ['depends' => [\yii\web\JqueryAsset::className()]]
+        );
+
+        $this->view->registerCssFile(
+            'vendors/iCheck/skins/flat/green.css',
+            ['depends' => [\yii\bootstrap\BootstrapAsset::className()]]
+        );
+
+        return $this->render('edit.tpl', [
+            'model' => $model,
+        ]);
+
+    }
+
+    public function actionCreate()
+    {
+        $model = new CreateLocationForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->save()) {
+                $this->redirect(['location/index']);
+            }
+        }
+
+        $this->view->registerJsFile(
+            'vendors/iCheck/icheck.min.js',
+            ['depends' => [\yii\web\JqueryAsset::className()]]
+        );
+
+        $this->view->registerCssFile(
+            'vendors/iCheck/skins/flat/green.css',
+            ['depends' => [\yii\bootstrap\BootstrapAsset::className()]]
+        );
+
+        return $this->render('create.tpl', [
+            'model' => $model,
+        ]);
     }
 }

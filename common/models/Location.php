@@ -1,22 +1,24 @@
 <?php
-
 namespace common\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use common\models\Product;
+use common\models\ProductCategory;
 
 /**
- * This is the model class for table "location".
+ * Location model
  *
  * @property integer $id
  * @property string $name
  * @property string $slug
+ * @property integer $parent_id
  * @property integer $visible
  */
-class Location extends \yii\db\ActiveRecord
+class Location extends ActiveRecord
 {
     const INVISIBLE = 0;
     const VISIBLE = 1;
-
     /**
      * @inheritdoc
      */
@@ -25,29 +27,10 @@ class Location extends \yii\db\ActiveRecord
         return '{{%location}}';
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function rules()
+    public function getPosts()
     {
-        return [
-            [['name', 'slug'], 'required'],
-            [['visible'], 'integer'],
-            [['name', 'slug'], 'string', 'max' => 50],
-        ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'slug' => 'Slug',
-            'visible' => 'Visible',
-        ];
+    	return $this->hasMany(Product::className(), ['id' => 'post_id'])
+            ->viaTable(ProductCategory::tableName(), ['location_id' => 'id']);
     }
 
     public function getId()
@@ -65,9 +48,22 @@ class Location extends \yii\db\ActiveRecord
         return $this->slug;
     }
 
-    public function getVisible() 
+    public function getParent()
     {
-        return (int) $this->visible;
+        return $this->hasOne(self::className(), ['id' => 'parent_id']);
+    }
+
+    public function getParentName()
+    {
+        $obj = $this->parent;
+        if ($obj) {
+            return $obj->name;
+        }
+    }
+
+    public function getVisible()
+    {
+        return (int)$this->visible;
     }
 
     public function isVisible()

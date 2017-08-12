@@ -7,10 +7,10 @@ use Yii;
 
 class FetchLocationForm extends Model
 {
-    public $visible;
-
     protected $_list;
 
+    protected $_total;
+    
     public function fetch()
     {
         $command = $this->createCommand();
@@ -28,14 +28,17 @@ class FetchLocationForm extends Model
     protected function createCommand()
     {
         $command = Location::find();
-        if ($this->visible !== null) {
-            $command->where(['visible' => (boolean)$this->visible]);
-        }
+        $command->orderBy('id desc');
         return $command;
     }
 
     public function getList()
     {
         return $this->_list;
+    }
+
+    public function getTotal()
+    {
+        return $this->_total;
     }
 }

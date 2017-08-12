@@ -7,6 +7,7 @@ use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use common\models\Image;
+use yii\helpers\ArrayHelper;
 
 /**
  * User model
@@ -27,15 +28,14 @@ use common\models\Image;
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $password write-only password
- * @property integer $is_staff
  */
 class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
 
-    const ROLE_MEMBER = 0;
-    const ROLE_STAFF = 1;
+    const GENDER_MALE = 0;
+    const GENDER_FEMALE = 1;
 
 
     /**
@@ -224,6 +224,12 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->gender;
     }
 
+    public function getGenderName()
+    {
+        $genders = self::getAvailableGender();
+        return ArrayHelper::getValue($genders, $this->gender);
+    }
+
     public function getAvatar()
     {
         return $this->avatar;
@@ -234,7 +240,7 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->hasOne(Image::className(), ['id' => 'avatar']);
     }
 
-    public function getAvatarUrl($size, $default = '../../images/image-placeholder.png')
+    public function getAvatarUrl($size, $default = '../../images/noavatar.png')
     {
         $image = $this->avatarImage;
         if (!$image) {
@@ -253,13 +259,18 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->email;
     }
 
-    public function getIsStaff()
+    public function getRoles()
     {
-        return (int)$this->is_staff;
+        $auth = Yii::$app->authManager;
+        $roles = $auth->getRolesByUser($this->id);
+        $roleNames = ArrayHelper::map($roles, 'name', 'description');
+        return $roleNames;
     }
-
-    public function isStaff()
+    public static function getAvailableGender()
     {
-        return ($this->getIsStaff() === self::ROLE_STAFF);
+        return [
+            self::GENDER_FEMALE => 'Female',
+            self::GENDER_MALE => 'Male'
+        ];
     }
 }

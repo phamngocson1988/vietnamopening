@@ -14,6 +14,7 @@ class LoginForm extends Model
     public $password;
 
     private $_user;
+    private $_roles = ['root', 'admin'];
 
 
     /**
@@ -25,7 +26,7 @@ class LoginForm extends Model
             // username and password are both required
             [['username', 'password'], 'required'],
             // user must be a staff
-            ['username', 'isStaff'],
+            ['username', 'isStaff', 'message' => 'You are not allowed to login'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
         ];
@@ -51,9 +52,15 @@ class LoginForm extends Model
     public function isStaff($attribute, $params)
     {
         if (!$this->hasErrors()) {
+            $auth = Yii::$app->authManager;
             $user = $this->getUser();
-            if (!$user->isStaff()) {
-                $this->addError($attribute, 'Incorrect username or password.');
+            $roles = $auth->getRolesByUser($user->id);
+            $roleNames = array_keys($roles);
+            $allowedRoles = $this->_roles;
+            $matches = array_intersect($roleNames, $allowedRoles);
+            if (count($matches) < 1) {
+                $this->addError($attribute, 'You are not allowed to login.');
+                return false;
             }
         }
     }

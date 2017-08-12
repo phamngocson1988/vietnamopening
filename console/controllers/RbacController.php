@@ -6,6 +6,10 @@ use yii\console\Controller;
 use common\models\User;
 use yii\base\InvalidParamException;
 
+/*
+ * Need to run this commandline first
+ * yii migrate --migrationPath=@yii/rbac/migrations
+ */
 class RbacController extends Controller
 {
     /**
@@ -39,18 +43,25 @@ class RbacController extends Controller
         $admin->description = 'Admin';
         $auth->add($admin);
 
-        // Role: user_manager
-        $user_manager = $auth->createRole('user_manager');
-        $user_manager->description = 'User Manager';
-        $auth->add($user_manager);
-
-        // Role: content_manager
-        $content_manager = $auth->createRole('content_manager');
-        $content_manager->description = 'Content Manager';
-        $auth->add($content_manager);
-
-        $auth->addChild($admin, $user_manager);
-        $auth->addChild($admin, $content_manager);
         $auth->addChild($root, $admin);
+
+        // Init the first user
+        $auth->assign($root, 1);
+    }
+
+    /**
+     * yii rbac/assign $userId $roleName
+     */
+    public function actionAssign($userId, $roleName)
+    {
+        if (!$this->confirm("Are you sure?")) {
+            return self::EXIT_CODE_NORMAL;
+        }
+        $auth = Yii::$app->authManager;
+        $role = $auth->getRole($roleName);
+        if ($role) {
+            $auth->assign($role, $userId);
+        }
+        
     }
 }

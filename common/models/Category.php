@@ -12,7 +12,7 @@ use common\models\ProductCategory;
  * @property integer $id
  * @property string $name
  * @property string $slug
- * @property integer $parent
+ * @property integer $parent_id
  * @property integer $visible
  */
 class Category extends ActiveRecord
@@ -50,7 +50,15 @@ class Category extends ActiveRecord
 
     public function getParent()
     {
-        return $this->parent;
+        return $this->hasOne(self::className(), ['id' => 'parent_id']);
+    }
+
+    public function getParentName()
+    {
+        $obj = $this->parent;
+        if ($obj) {
+            return $obj->name;
+        }
     }
 
     public function getVisible()

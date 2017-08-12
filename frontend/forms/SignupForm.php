@@ -9,8 +9,4 @@ use common\forms\SignupForm as BaseSignupForm;
  */
 class SignupForm extends BaseSignupForm
 {
-    protected function setExtraAttributes(&$user) 
-    {
-        $user->is_staff = User::ROLE_MEMBER;
-    }
 }

@@ -31,7 +31,7 @@ AppAsset::register($this);
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>VNOpening Admin!</span></a>
+              <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>VietnamOpening Admin!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -55,26 +55,19 @@ AppAsset::register($this);
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <!-- <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="tables.html">Tables</a></li>
-                      <li><a href="tables_dynamic.html">Table Dynamic</a></li>
-                    </ul>
-                  </li> -->
-                  <li><a><i class="fa fa-newspaper-o"></i> Posts <span class="fa fa-chevron-down"></span></a>
+                  <!-- <li><a><i class="fa fa-newspaper-o"></i> Posts <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?= Url::to(['post/index']) ?>">All Posts</a></li>
                       <li><a href="<?= Url::to(['post/unchecked']) ?>">Unchecked Posts</a></li>
                       <li><a href="<?= Url::to(['post/invalid']) ?>">Invalid Posts</a></li>
                       <li><a href="<?= Url::to(['post/create']) ?>">Create</a></li>
                     </ul>
-                  </li>
+                  </li> -->
 
                   <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?= Url::to(['user/index']) ?>">Members</a></li>
-                      <li><a href="<?= Url::to(['user/staff']) ?>">Staffs</a></li>
-                      <li><a href="<?= Url::to(['user/create']) ?>">Create Staff</a></li>
+                      <li><a href="<?= Url::to(['user/index']) ?>">Users</a></li>
+                      <li><a href="<?= Url::to(['user/create']) ?>">Create</a></li>
                     </ul>
                   </li>
 
@@ -85,7 +78,7 @@ AppAsset::register($this);
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-list-ul"></i> Categories <span class=""></span></a>
+                  <li><a><i class="fa fa-list-ul"></i> Categories <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?= Url::to(['category/index']) ?>">All</a></li>
                       <li><a href="<?= Url::to(['category/create']) ?>">Create</a></li>
@@ -95,6 +88,7 @@ AppAsset::register($this);
                   <li><a><i class="fa fa-map-marker"></i> Locations<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?= Url::to(['location/index']) ?>">All</a></li>
+                      <li><a href="<?= Url::to(['location/create']) ?>">Create</a></li>
                     </ul>
                   </li>
 
@@ -102,7 +96,7 @@ AppAsset::register($this);
                     <ul class="nav child_menu">
                       <li><a href="javascript:void(0)">Gateways</a></li>
                     </ul>
-                  </li>
+                  </li> 
 
                 </ul>
               </div>
@@ -139,11 +133,13 @@ AppAsset::register($this);
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?= Yii::$app->user->getIdentity()->getAvatarUrl('150x150')?>" alt=""><?= Yii::$app->user->getIdentity()->name?>
+                    <img global="avatar_<?= Yii::$app->user->id;?>" src="<?= Yii::$app->user->getIdentity()->getAvatarUrl('150x150')?>" alt=""><?= Yii::$app->user->getIdentity()->name?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="<?= Url::to(['user/profile']) ?>"> Profile</a></li>
+                    <li><a href="<?= Url::to(['profile/index']) ?>"> Profile</a></li>
+                    <li><a href="<?= Url::to(['profile/edit']) ?>"> Update Account</a></li>
+                    <li><a href="<?= Url::to(['profile/password']) ?>"> Change Password</a></li>
                     <li><a href="<?= Url::to(['site/logout']) ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
