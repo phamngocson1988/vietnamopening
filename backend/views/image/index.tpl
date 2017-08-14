@@ -21,7 +21,7 @@
     </div>
   </div>
 </div>
-{*include file='test.tpl'*}
+
 {registerJs}
 <!-- inline scripts related to this page -->
 {literal}
@@ -53,7 +53,6 @@
       },
     });
   });
-
 
   // Copy
   $("#items").on('click', 'a.copy', function(e){
