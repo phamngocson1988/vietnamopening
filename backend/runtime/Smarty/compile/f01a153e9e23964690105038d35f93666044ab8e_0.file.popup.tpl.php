@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-11 12:14:05
+/* Smarty version 3.1.31, created on 2017-08-14 08:27:53
   from "C:\xampp\htdocs\vietnamopening\backend\views\image\popup.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_598d836d5dc043_25304811',
+  'unifunc' => 'content_599142e999ba90_98168238',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f01a153e9e23964690105038d35f93666044ab8e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\vietnamopening\\backend\\views\\image\\popup.tpl',
-      1 => 1502446126,
+      1 => 1502692071,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_598d836d5dc043_25304811 (Smarty_Internal_Template $_smarty_tpl) {
+function content_599142e999ba90_98168238 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" id="image-popup-form">
   <div class="modal-dialog modal-lg">
@@ -32,45 +32,18 @@ function content_598d836d5dc043_25304811 (Smarty_Internal_Template $_smarty_tpl)
         <h4 class="modal-title" id="myModalLabel">Gallery</h4>
       </div>
       <div class="modal-body" style="height: 400px; overflow: scroll;">
-        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list']->value, 'model');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['model']->value) {
-?>
-        <div class="col-md-2 image-item" data-id="<?php echo $_smarty_tpl->tpl_vars['model']->value->getId();?>
-">
-          <div class="thumbnail" style="width: 100%; height: 100%">
-            <div class="view view-first">
-              <img style="width: 100%; display: block;" src="<?php echo $_smarty_tpl->tpl_vars['model']->value->getUrl($_smarty_tpl->tpl_vars['default_thumbnail']->value);?>
-" alt="image" />
-              <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['app']->value->params['thumbnails'], 'thumbnail');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['thumbnail']->value) {
-?>
-              <input type="hidden" name="<?php echo $_smarty_tpl->tpl_vars['thumbnail']->value;?>
-" value="<?php echo $_smarty_tpl->tpl_vars['model']->value->getUrl($_smarty_tpl->tpl_vars['thumbnail']->value);?>
-">
-              <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
-?>
-
-            </div>
+        <div class="row" id="popup-items">
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <button type="button" class="btn btn-default btn-block" id="load_more_popup">Load More</button>
           </div>
         </div>
-        <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
-?>
-
       </div>
       <div class="modal-footer">
         <div class="btn-group">
           <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button" aria-expanded="false">Size <span class="caret"></span></button>
-          <ul role="menu" class="dropdown-menu">
+          <ul role="size" class="dropdown-menu">
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['app']->value->params['thumbnails'], 'thumbnail');
 if ($_from !== null) {
@@ -86,12 +59,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 ?>
 
           </ul>
-          </div>
-          <div class="btn-group">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
         <div class="btn-group">
-        <button type="button" class="btn btn-primary" function="ok">Choose</button>
+          <button type="button" class="btn btn-default" function="upload">Upload</button>
+          <input type="file" name="popup-upload-image[]" multiple="true" id="popup-upload-image" style="display: none">
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary" function="ok">Choose</button>
         </div>
       </div>
 

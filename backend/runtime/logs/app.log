@@ -8453,3 +8453,590 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1502443450.88
     'REQUEST_TIME' => 1502443450
 ]
+2017-08-14 05:45:39 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "image/image/ajax-load". in C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('image/image/aja...', Array)
+#1 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-08-14 05:45:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'offset' => '0'
+    'limit' => '10'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"1rCThmoOd1KxXfWoT7OtOWTzz9wnuktM\";}'
+    'advanced-backend' => 'kv393kqg66oa3jaosrl5j6mhde'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.vietnamopening.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'LjUzUXB3ZmwfR3AFGBoJI0oEeCkoETEDegJ8JT8gMhZUDEQ/BRwSIQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://admin.vietnamopening.com/image/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ja;q=0.6,ko;q=0.4,vi;q=0.2'
+    'HTTP_COOKIE' => '_csrf-backend=c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%221rCThmoOd1KxXfWoT7OtOWTzz9wnuktM%22%3B%7D; advanced-backend=kv393kqg66oa3jaosrl5j6mhde'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\ASUS\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7 Server at admin.vietnamopening.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7'
+    'SERVER_NAME' => 'admin.vietnamopening.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/vietnamopening/backend/web/index.php'
+    'REMOTE_PORT' => '53430'
+    'REDIRECT_URL' => '/image/image/ajax-load'
+    'REDIRECT_QUERY_STRING' => 'offset=0&limit=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'offset=0&limit=10'
+    'REQUEST_URI' => '/image/image/ajax-load?offset=0&limit=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1502682339.293
+    'REQUEST_TIME' => 1502682339
+]
+2017-08-14 05:45:41 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "image/image/ajax-load". in C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('image/image/aja...', Array)
+#1 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-08-14 05:45:41 [127.0.0.1][-][-][info][application] $_GET = [
+    'offset' => '0'
+    'limit' => '10'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"1rCThmoOd1KxXfWoT7OtOWTzz9wnuktM\";}'
+    'advanced-backend' => 'kv393kqg66oa3jaosrl5j6mhde'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.vietnamopening.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'a2FLbVFKNUdaEwg5OSdaCA9QABUJLGIoP1YEGR4dYT0RWDwDJCFBCg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://admin.vietnamopening.com/image/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ja;q=0.6,ko;q=0.4,vi;q=0.2'
+    'HTTP_COOKIE' => '_csrf-backend=c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%221rCThmoOd1KxXfWoT7OtOWTzz9wnuktM%22%3B%7D; advanced-backend=kv393kqg66oa3jaosrl5j6mhde'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\ASUS\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7 Server at admin.vietnamopening.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7'
+    'SERVER_NAME' => 'admin.vietnamopening.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/vietnamopening/backend/web/index.php'
+    'REMOTE_PORT' => '53442'
+    'REDIRECT_URL' => '/image/image/ajax-load'
+    'REDIRECT_QUERY_STRING' => 'offset=0&limit=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'offset=0&limit=10'
+    'REQUEST_URI' => '/image/image/ajax-load?offset=0&limit=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1502682341.234
+    'REQUEST_TIME' => 1502682341
+]
+2017-08-14 05:45:50 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "ajax-load". in C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Module.php:462
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('ajax-load', Array)
+#1 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php:112
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2017-08-14 05:45:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'offset' => '0'
+    'limit' => '10'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"1rCThmoOd1KxXfWoT7OtOWTzz9wnuktM\";}'
+    'advanced-backend' => 'kv393kqg66oa3jaosrl5j6mhde'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.vietnamopening.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Xy11UHVmLTRuXzYEHQtCezscPigtAHpbCxo6JDoxeU4lFAI.AA1ZeQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://admin.vietnamopening.com/image/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ja;q=0.6,ko;q=0.4,vi;q=0.2'
+    'HTTP_COOKIE' => '_csrf-backend=c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%221rCThmoOd1KxXfWoT7OtOWTzz9wnuktM%22%3B%7D; advanced-backend=kv393kqg66oa3jaosrl5j6mhde'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\ASUS\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7 Server at admin.vietnamopening.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7'
+    'SERVER_NAME' => 'admin.vietnamopening.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/vietnamopening/backend/web/index.php'
+    'REMOTE_PORT' => '53463'
+    'REDIRECT_URL' => '/ajax-load'
+    'REDIRECT_QUERY_STRING' => 'offset=0&limit=10'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'offset=0&limit=10'
+    'REQUEST_URI' => '/ajax-load?offset=0&limit=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1502682350.576
+    'REQUEST_TIME' => 1502682350
+]
+2017-08-14 06:06:12 [127.0.0.1][1][kv393kqg66oa3jaosrl5j6mhde][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\xampp\htdocs\vietnamopening\backend\views\image\_popup.tpl in C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\ImageController))
+#1 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('_popup.tpl', Array, Object(backend\controllers\ImageController))
+#2 C:\xampp\htdocs\vietnamopening\backend\controllers\ImageController.php(64): yii\base\Controller->renderPartial('_popup.tpl', Array)
+#3 [internal function]: backend\controllers\ImageController->actionAjaxLoad()
+#4 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('ajax-load', Array)
+#7 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('image/ajax-load', Array)
+#8 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2017-08-14 06:06:11 [127.0.0.1][1][kv393kqg66oa3jaosrl5j6mhde][info][application] $_GET = [
+    'offset' => '0'
+    'limit' => '10'
+    'template' => '_popup'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"1rCThmoOd1KxXfWoT7OtOWTzz9wnuktM\";}'
+    'advanced-backend' => 'kv393kqg66oa3jaosrl5j6mhde'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.vietnamopening.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Vk8zYXpWTEpnPXA1EjsjBTJ.eBkiMBslAnh8FTUBGDAsdkQPDz04Bw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://admin.vietnamopening.com/image/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ja;q=0.6,ko;q=0.4,vi;q=0.2'
+    'HTTP_COOKIE' => '_csrf-backend=c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%221rCThmoOd1KxXfWoT7OtOWTzz9wnuktM%22%3B%7D; advanced-backend=kv393kqg66oa3jaosrl5j6mhde'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\ASUS\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7 Server at admin.vietnamopening.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7'
+    'SERVER_NAME' => 'admin.vietnamopening.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/vietnamopening/backend/web/index.php'
+    'REMOTE_PORT' => '54953'
+    'REDIRECT_URL' => '/image/ajax-load'
+    'REDIRECT_QUERY_STRING' => 'offset=0&limit=10&template=_popup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'offset=0&limit=10&template=_popup'
+    'REQUEST_URI' => '/image/ajax-load?offset=0&limit=10&template=_popup'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1502683571.873
+    'REQUEST_TIME' => 1502683571
+]
+2017-08-14 06:06:16 [127.0.0.1][1][kv393kqg66oa3jaosrl5j6mhde][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\xampp\htdocs\vietnamopening\backend\views\image\_popup.tpl in C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\ImageController))
+#1 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('_popup.tpl', Array, Object(backend\controllers\ImageController))
+#2 C:\xampp\htdocs\vietnamopening\backend\controllers\ImageController.php(64): yii\base\Controller->renderPartial('_popup.tpl', Array)
+#3 [internal function]: backend\controllers\ImageController->actionAjaxLoad()
+#4 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('ajax-load', Array)
+#7 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('image/ajax-load', Array)
+#8 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2017-08-14 06:06:16 [127.0.0.1][1][kv393kqg66oa3jaosrl5j6mhde][info][application] $_GET = [
+    'offset' => '0'
+    'limit' => '10'
+    'template' => '_popup'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"1rCThmoOd1KxXfWoT7OtOWTzz9wnuktM\";}'
+    'advanced-backend' => 'kv393kqg66oa3jaosrl5j6mhde'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.vietnamopening.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Vk8zYXpWTEpnPXA1EjsjBTJ.eBkiMBslAnh8FTUBGDAsdkQPDz04Bw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://admin.vietnamopening.com/image/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ja;q=0.6,ko;q=0.4,vi;q=0.2'
+    'HTTP_COOKIE' => '_csrf-backend=c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%221rCThmoOd1KxXfWoT7OtOWTzz9wnuktM%22%3B%7D; advanced-backend=kv393kqg66oa3jaosrl5j6mhde'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\ASUS\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7 Server at admin.vietnamopening.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7'
+    'SERVER_NAME' => 'admin.vietnamopening.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/vietnamopening/backend/web/index.php'
+    'REMOTE_PORT' => '54966'
+    'REDIRECT_URL' => '/image/ajax-load'
+    'REDIRECT_QUERY_STRING' => 'offset=0&limit=10&template=_popup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'offset=0&limit=10&template=_popup'
+    'REQUEST_URI' => '/image/ajax-load?offset=0&limit=10&template=_popup'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1502683576.463
+    'REQUEST_TIME' => 1502683576
+]
+2017-08-14 06:07:46 [127.0.0.1][1][kv393kqg66oa3jaosrl5j6mhde][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: list in C:\xampp\htdocs\vietnamopening\backend\runtime\Smarty\compile\7829160b9aff6f3465505f889571cb96744b1e16_0.file._popup_item.tpl.php:24
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\backend\runtime\Smarty\compile\7829160b9aff6f3465505f889571cb96744b1e16_0.file._popup_item.tpl.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_template_resource_base.php(128): content_5991221251bd32_48840262(Object(Smarty_Internal_Template))
+#2 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_template_compiled.php(172): Smarty_Template_Resource_Base->getRenderedTemplateCode(Object(Smarty_Internal_Template))
+#3 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_internal_template.php(206): Smarty_Template_Compiled->render(Object(Smarty_Internal_Template))
+#4 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatebase.php(216): Smarty_Internal_Template->render(false, 0)
+#5 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatebase.php(107): Smarty_Internal_TemplateBase->_execute(Object(Smarty_Internal_Template), NULL, NULL, NULL, 0)
+#6 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2-smarty\ViewRenderer.php(253): Smarty_Internal_TemplateBase->fetch()
+#7 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\View.php(246): yii\smarty\ViewRenderer->render(Object(yii\web\View), 'C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\ImageController))
+#9 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('_popup_item.tpl', Array, Object(backend\controllers\ImageController))
+#10 C:\xampp\htdocs\vietnamopening\backend\controllers\ImageController.php(64): yii\base\Controller->renderPartial('_popup_item.tpl', Array)
+#11 [internal function]: backend\controllers\ImageController->actionAjaxLoad()
+#12 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('ajax-load', Array)
+#15 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('image/ajax-load', Array)
+#16 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#18 {main}
+2017-08-14 06:07:46 [127.0.0.1][1][kv393kqg66oa3jaosrl5j6mhde][info][application] $_GET = [
+    'offset' => '0'
+    'limit' => '10'
+    'template' => '_popup_item'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"1rCThmoOd1KxXfWoT7OtOWTzz9wnuktM\";}'
+    'advanced-backend' => 'kv393kqg66oa3jaosrl5j6mhde'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.vietnamopening.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'aFFFMlU5b09ZIwZmPVQAAAxgDkoNXzggPGYKRhpuOzUSaDJcIFIbAg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://admin.vietnamopening.com/image/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ja;q=0.6,ko;q=0.4,vi;q=0.2'
+    'HTTP_COOKIE' => '_csrf-backend=c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%221rCThmoOd1KxXfWoT7OtOWTzz9wnuktM%22%3B%7D; advanced-backend=kv393kqg66oa3jaosrl5j6mhde'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\ASUS\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7 Server at admin.vietnamopening.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7'
+    'SERVER_NAME' => 'admin.vietnamopening.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/vietnamopening/backend/web/index.php'
+    'REMOTE_PORT' => '55106'
+    'REDIRECT_URL' => '/image/ajax-load'
+    'REDIRECT_QUERY_STRING' => 'offset=0&limit=10&template=_popup_item'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'offset=0&limit=10&template=_popup_item'
+    'REQUEST_URI' => '/image/ajax-load?offset=0&limit=10&template=_popup_item'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1502683666.207
+    'REQUEST_TIME' => 1502683666
+]
+2017-08-14 06:08:32 [127.0.0.1][1][kv393kqg66oa3jaosrl5j6mhde][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: default_thumbnail in C:\xampp\htdocs\vietnamopening\backend\runtime\Smarty\compile\7829160b9aff6f3465505f889571cb96744b1e16_0.file._popup_item.tpl.php:29
+Stack trace:
+#0 C:\xampp\htdocs\vietnamopening\backend\runtime\Smarty\compile\7829160b9aff6f3465505f889571cb96744b1e16_0.file._popup_item.tpl.php(29): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 29, Array)
+#1 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_template_resource_base.php(128): content_59912240560b33_51074206(Object(Smarty_Internal_Template))
+#2 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_template_compiled.php(172): Smarty_Template_Resource_Base->getRenderedTemplateCode(Object(Smarty_Internal_Template))
+#3 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_internal_template.php(206): Smarty_Template_Compiled->render(Object(Smarty_Internal_Template))
+#4 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatebase.php(216): Smarty_Internal_Template->render(false, 0)
+#5 C:\xampp\htdocs\vietnamopening\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatebase.php(107): Smarty_Internal_TemplateBase->_execute(Object(Smarty_Internal_Template), NULL, NULL, NULL, 0)
+#6 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2-smarty\ViewRenderer.php(253): Smarty_Internal_TemplateBase->fetch()
+#7 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\View.php(246): yii\smarty\ViewRenderer->render(Object(yii\web\View), 'C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\ImageController))
+#9 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('_popup_item.tpl', Array, Object(backend\controllers\ImageController))
+#10 C:\xampp\htdocs\vietnamopening\backend\controllers\ImageController.php(64): yii\base\Controller->renderPartial('_popup_item.tpl', Array)
+#11 [internal function]: backend\controllers\ImageController->actionAjaxLoad()
+#12 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('ajax-load', Array)
+#15 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\web\Application.php(100): yii\base\Module->runAction('image/ajax-load', Array)
+#16 C:\xampp\htdocs\vietnamopening\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\xampp\htdocs\vietnamopening\backend\web\index.php(17): yii\base\Application->run()
+#18 {main}
+2017-08-14 06:08:32 [127.0.0.1][1][kv393kqg66oa3jaosrl5j6mhde][info][application] $_GET = [
+    'offset' => '0'
+    'limit' => '10'
+    'template' => '_popup_item'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"1rCThmoOd1KxXfWoT7OtOWTzz9wnuktM\";}'
+    'advanced-backend' => 'kv393kqg66oa3jaosrl5j6mhde'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'admin.vietnamopening.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'T3RnQzZFUk1.BiQXXig9AitFLDtuIwUiG0MoN3kSBjc1TRAtQy4mAA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://admin.vietnamopening.com/image/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,ja;q=0.6,ko;q=0.4,vi;q=0.2'
+    'HTTP_COOKIE' => '_csrf-backend=c311003611a5535b2c6c26e5731c9d7b9aedea582eb6f28f701ed79e9512613ba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%221rCThmoOd1KxXfWoT7OtOWTzz9wnuktM%22%3B%7D; advanced-backend=kv393kqg66oa3jaosrl5j6mhde'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\ASUS\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7 Server at admin.vietnamopening.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.26 (Win32) OpenSSL/1.0.2l PHP/7.1.7'
+    'SERVER_NAME' => 'admin.vietnamopening.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/vietnamopening/backend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/vietnamopening/backend/web/index.php'
+    'REMOTE_PORT' => '55179'
+    'REDIRECT_URL' => '/image/ajax-load'
+    'REDIRECT_QUERY_STRING' => 'offset=0&limit=10&template=_popup_item'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'offset=0&limit=10&template=_popup_item'
+    'REQUEST_URI' => '/image/ajax-load?offset=0&limit=10&template=_popup_item'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1502683712.206
+    'REQUEST_TIME' => 1502683712
+]

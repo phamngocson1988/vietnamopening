@@ -15,8 +15,6 @@
         <div class="row">
         	<div class="col-md-4 col-md-offset-4">
         		<button type="button" class="btn btn-default btn-block" id="load_more">Load More</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-            <button type="button" class="btn btn-primary" id="manual">Manual</button>
         	</div>
         </div>
       </div>
@@ -64,20 +62,5 @@
     copyToClipboard(_url);
   });
 
-  
-
-
-
-
-
-
-
-
-  var model = new ImageManager({
-    request_url: '{/literal}{$links.image_popup}{literal}',
-  });
-  model.load_popup();
-
-  $("#manual").selectImage(model, {});
 {/literal}
 {/registerJs}

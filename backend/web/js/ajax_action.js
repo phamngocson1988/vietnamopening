@@ -105,7 +105,6 @@ function AjaxPaging(opts) {
         offset: 0,
         limit: 10,
         condition: null,
-
     }; 
 
     //constructor
@@ -231,22 +230,6 @@ function AjaxPaging(opts) {
     this.init(opts);
 }
 
-function PopupImage(opts) {
-    this.options = {
-        request_url : 'http://admin.vietnamopening.com/image/test', 
-        trigger_element: null,
-        file_element: '#file', // seletor of the file element
-        review_width: '150',
-        review_height: '150',
-    }; 
-
-    this.init = function (opts) {
-        this.options = $.extend(this.options, opts);
-        var that = this;
-    };
-    this.init(opts);
-}
-
 function AjaxUploadImage(opts) {
     // default configuration properties
     this.options = {
@@ -326,39 +309,29 @@ function AjaxUploadImage(opts) {
     this.init(opts);
 };
 
-
-
-
-
-
-//***********
+/**
+ * Manage images on popup
+ * var manager = new ImageManager();
+ */
 function ImageManager(opts) {
     // default configuration properties
     this.options = {
         id: '#image-popup-form',
-        request_url : 'popup', //image/popup
-
     }; 
-    // form to push data to server
-    this.form = new FormData();
-    this.is_exist = false;
+    this.links = {
+        popup: '/image/popup',
+        load: '/image/ajax-load',
+        upload: '/image/ajax-upload',
+    };
+
+    // The element which call open popup
     this.observer = null;
 
-    var that;
     //constructor
     this.init = function (opts) {
-        that = this;
+        var that = this;
         that.options = $.extend(that.options, opts);
-        
-        // $(document).on('click', '#modal-form li', function(){
-        //     $("#modal-form li").removeClass('selected');
-        //     $(this).addClass('selected');
-        // });
-
-        // $(document).on('click', '#avatar', function(){
-        //     that.open_popup();    
-        // });
-        
+        that.load_popup();
     };
 
     this.open_popup = function() {
@@ -366,13 +339,13 @@ function ImageManager(opts) {
     }
 
     this.load_popup = function() {
+        var that = this;
         $.ajax({
-            url: that.options.request_url,
+            url: that.links.popup,
             type: 'GET',
             dataType : 'html',
             success: function (result, textStatus, jqXHR) {
                 that.success(result);
-                that.is_exist = true;
             },
             error: function(xhr, status, error) {
                 var err = eval("(" + xhr.responseText + ")");
@@ -384,26 +357,92 @@ function ImageManager(opts) {
     //success
     this.success = function(result) {
         $('body').append(result);  
+        var that = this;
+        // Load images
+        var paging = new AjaxPaging({
+            auto_first_load: true,
+            request_url: this.links.load,
+            container: '#image-popup-form #popup-items',
+            condition: {template: '_popup_item'},
+            limit: 12
+        });
 
+        $(this.options.id + ' #load_more_popup').on('click', function(){
+            paging.load();
+        });
+
+        // Close model
         $(this.options.id).on('hide.bs.modal', function() {
             that.observer = null;
         });
+
+        // OK function
         $(this.options.id).on('click', '[function="ok"]', function() {
             if (that.observer != null) {
-                var size = $(that.options.id).find("[role='menu'] a.selected").attr('value');console.log(size);
-                var is = $(that.options.id).find('.thumbnail.selected');
+                var size = $(that.options.id).find("[role='size'] a.selected").attr('value');
+                var objs = $(that.options.id).find('.thumbnail.selected').find('input[name="'+size+'"]');
+                
 
-                that.observer.callback();
+                if (that.observer.type == 'single') {
+                    data = {};
+                    data.id = $(objs).data('id');
+                    data.src = $(objs).val();
+                } else {
+                    data = [];
+                    $.each(objs, function( index, obj ) {
+                        var item = {};
+                        item.id = $(obj).data('id');
+                        item.src = $(obj).val();
+                        data[index] = item;
+                    });
+                }
+                that.observer.callback(data);
             }
             $(that.options.id).modal('hide');
         });
-        $(this.options.id).on("click", "[role='menu'] a", function() {
+
+        // Upload function
+        var upload = new AjaxUploadImage({
+            request_url: this.links.upload,
+            file_element: this.options.id + ' #popup-upload-image',
+            trigger_element: "[function='upload']"
+        });   
+        upload.callback = function(images) {
+            var items = '';
+            $.each(images, function( index, img ) {
+                items += '<div class="col-md-2 image-item" data-id="'+img.id+'">';
+                items += '<div class="thumbnail" style="width: 100%; height: 100%">';
+                items += '<div class="view view-first">';
+                items += '<img style="width: 100%; display: block;" src="'+img.thumb+'" alt="image" />'
+                $.each(img.size, function( size, src ) {
+                    items += '<input type="hidden" name="'+size+'" value="'+src+'" data-id="'+img.id+'">';
+                });
+                items += '</div>';
+                items += '</div>';
+                items += '</div>';
+            });
+            $('#popup-items').prepend($(items));
+        }
+
+        // Choose size
+        $(this.options.id).on("click", "[role='size'] a", function() {
             $(this).closest('ul').find('a').removeClass('selected');
             $(this).addClass('selected'); 
         });
+
+        // Choose image(s)
         $(this.options.id).on("click", ".thumbnail", function() {
-            $(this).closest('.modal-body').find('.thumbnail').removeClass('selected');
-            $(this).addClass('selected'); 
+            if (that.observer == null) {
+                return;
+            }
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+            } else {
+                if (that.observer.type == 'single') {
+                    $(this).closest('#popup-items').find('.thumbnail').removeClass('selected');
+                }
+                $(this).addClass('selected'); 
+            }
         });
 
     }
@@ -415,42 +454,26 @@ function ImageManager(opts) {
     this.init(opts);
 };
 
+/**
+ * Open image manager popup
+ * @var ImageManager manager
+ * @var json options
+ * var $(selector).selectImage(manager, options);
+ */
 $.fn.selectImage = function(manager, opts) {
     if (!manager) {
         return false;
     }
-
-    that = this;
-
-    options = {
+    var options = {
         type: 'single', //single | multiple
-        size: '150x150',
-        name: 'image',
-        image: that,
-        callback: function() {
-            console.log('callback');
-            var img = $(manager.options.id).find('.modal-body').find('.selected').find('img');
-            var thumb = img.attr('src');
-            var src = img.attr('data-original');
-            var id = img.attr('data-id');
-            $(this.image).attr('src', thumb);
-
-            var e_name = this.type == 'multiple' ? this.name + '[]' : this.name;
-            var e_name_src = this.type == 'multiple' ? this.name + '_src[]' : this.name + '_src';
-            $(this.image).parent().find('[name="' + e_name + '"]').val(id);
-            $(this.image).parent().find('[name="' + e_name_src + '"]').val(src);
+        callback: function(objs) {
+            
         }
-
     };
     options = $.extend(options, opts);
-    var e_name = options.type == 'multiple' ? options.name + '[]' : options.name;
-    var e_name_src = options.type == 'multiple' ? options.name + '_src[]' : options.name + '_src';
-    $('<input>').attr({type: 'hidden', name: e_name}).insertAfter(options.image);
-    $('<input>').attr({type: 'hidden', name: e_name_src}).insertAfter(options.image);
 
     $(this).on('click', function() {
         manager.attach(options);
         manager.open_popup();
     });
 }
-

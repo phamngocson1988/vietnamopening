@@ -8,33 +8,32 @@
         <h4 class="modal-title" id="myModalLabel">Gallery</h4>
       </div>
       <div class="modal-body" style="height: 400px; overflow: scroll;">
-        {foreach $list as $model}
-        <div class="col-md-2 image-item" data-id="{$model->getId()}">
-          <div class="thumbnail" style="width: 100%; height: 100%">
-            <div class="view view-first">
-              <img style="width: 100%; display: block;" src="{$model->getUrl($default_thumbnail)}" alt="image" />
-              {foreach $app->params['thumbnails'] as $thumbnail}
-              <input type="hidden" name="{$thumbnail}" value="{$model->getUrl($thumbnail)}">
-              {/foreach}
-            </div>
+        <div class="row" id="popup-items">
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <button type="button" class="btn btn-default btn-block" id="load_more_popup">Load More</button>
           </div>
         </div>
-        {/foreach}
       </div>
       <div class="modal-footer">
         <div class="btn-group">
           <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button" aria-expanded="false">Size <span class="caret"></span></button>
-          <ul role="menu" class="dropdown-menu">
+          <ul role="size" class="dropdown-menu">
             {foreach $app->params['thumbnails'] as $thumbnail}
             <li><a href="javascript:void(0)" {if $default_thumbnail eq $thumbnail}class="selected"{/if} value="{$thumbnail}"><i class="fa fa-check "></i> <span class="search-option">{$thumbnail}</span></a></li>
             {/foreach}
           </ul>
-          </div>
-          <div class="btn-group">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
         <div class="btn-group">
-        <button type="button" class="btn btn-primary" function="ok">Choose</button>
+          <button type="button" class="btn btn-default" function="upload">Upload</button>
+          <input type="file" name="popup-upload-image[]" multiple="true" id="popup-upload-image" style="display: none">
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary" function="ok">Choose</button>
         </div>
       </div>
 

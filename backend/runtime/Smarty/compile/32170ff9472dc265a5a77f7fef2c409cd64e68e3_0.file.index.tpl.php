@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-10 05:28:09
+/* Smarty version 3.1.31, created on 2017-08-14 11:08:36
   from "C:\xampp\htdocs\vietnamopening\backend\views\profile\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_598bd2c92fcd93_96673393',
+  'unifunc' => 'content_59916894df33d1_17779580',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32170ff9472dc265a5a77f7fef2c409cd64e68e3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\vietnamopening\\backend\\views\\profile\\index.tpl',
-      1 => 1502335687,
+      1 => 1502701714,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_598bd2c92fcd93_96673393 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59916894df33d1_17779580 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="page-title">
   <div class="title_left">
@@ -49,12 +49,7 @@ function content_598bd2c92fcd93_96673393 (Smarty_Internal_Template $_smarty_tpl)
           </div>
           <h3><?php echo $_smarty_tpl->tpl_vars['user']->value->getName();?>
 </h3>
-
           <a class="btn btn-success" action="change-avatar"><i class="fa fa-edit m-right-xs"></i>Change Avatar</a>
-          <input type="file" name="change-avatar" id="change-avatar" style="display: none">
-
-          <br />
-
         </div>
 
         <div class="col-md-9 col-sm-9 col-xs-12">
@@ -139,37 +134,29 @@ ob_start();
 
 <!-- inline scripts related to this page -->
 
-
-// Change Avatar
-var upload = new AjaxUploadImage({
-  request_url: '<?php echo $_smarty_tpl->tpl_vars['links']->value['upload_image'];?>
-',
-  file_element: '#change-avatar',
-  trigger_element: "a[action='change-avatar']"
-});   
-upload.callback = function(images) {
-  $.each(images, function( index, img ) {
+var manager = new ImageManager();
+$("a[action='change-avatar']").selectImage(manager, {
+  callback: function(img) {
+    var thumb = img.src;
+    var id = img.id;
     $.ajax({
       url: '<?php echo $_smarty_tpl->tpl_vars['links']->value['change_avatar'];?>
 ',
       type: 'POST',
       dataType : 'json',
-      data: {image_id: index},
+      data: {image_id: id},
       success: function (result, textStatus, jqXHR) {
         if (result.status == false) {
           console.log(result.error);
           return false;
         } else {
           $('[global="avatar_<?php echo $_smarty_tpl->tpl_vars['user']->value->getId();?>
-"]').attr('src', img.thumb);
+"]').attr('src', thumb);
         }
       },
     });
-  });
-}
-
-
-
+  }
+});
 
 <?php $_block_repeat=false;
 echo $_block_plugin1->blockJavaScript(array(), ob_get_clean(), $_smarty_tpl, $_block_repeat);

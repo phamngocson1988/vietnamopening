@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-11 05:52:04
+/* Smarty version 3.1.31, created on 2017-08-14 11:09:26
   from "C:\xampp\htdocs\vietnamopening\backend\views\image\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_598d29e4b7e0c7_25077547',
+  'unifunc' => 'content_599168c6338718_41751694',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7839f911ad2719f36e3b284d3d308ad3dcd4734' => 
     array (
       0 => 'C:\\xampp\\htdocs\\vietnamopening\\backend\\views\\image\\index.tpl',
-      1 => 1502423521,
+      1 => 1502701762,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_598d29e4b7e0c7_25077547 (Smarty_Internal_Template $_smarty_tpl) {
+function content_599168c6338718_41751694 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="clearfix"></div>
@@ -39,8 +39,6 @@ function content_598d29e4b7e0c7_25077547 (Smarty_Internal_Template $_smarty_tpl)
         <div class="row">
         	<div class="col-md-4 col-md-offset-4">
         		<button type="button" class="btn btn-default btn-block" id="load_more">Load More</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-            <button type="button" class="btn btn-primary" id="manual">Manual</button>
         	</div>
         </div>
       </div>
@@ -99,22 +97,6 @@ ob_start();
     copyToClipboard(_url);
   });
 
-  
-
-
-
-
-
-
-
-
-  var model = new ImageManager({
-    request_url: '<?php echo $_smarty_tpl->tpl_vars['links']->value['image_popup'];?>
-',
-  });
-  model.load_popup();
-
-  $("#manual").selectImage(model, {});
 
 <?php $_block_repeat=false;
 echo $_block_plugin1->blockJavaScript(array(), ob_get_clean(), $_smarty_tpl, $_block_repeat);

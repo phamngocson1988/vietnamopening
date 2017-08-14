@@ -59,8 +59,9 @@ class ImageController extends Controller
             $models = $form->fetch();
             $total = $form->count();
             $html = "";
+            $template = $request->get('template', '_item');
             foreach ($models as $model) {
-                $html .= $this->renderPartial('_item.tpl',['model' => $model]);
+                $html .= $this->renderPartial("$template.tpl",['model' => $model]);
             }
             $data = [
                 'items' => $html,
@@ -101,6 +102,9 @@ class ImageController extends Controller
                     $info['id'] = $imageId = $image->getId();
                     $info['thumb'] = $image->getUrl($size);
                     $info['src'] = $image->getUrl();
+                    foreach (Yii::$app->params['thumbnails'] as $thumbnail) {
+                        $info['size'][$thumbnail] = $image->getUrl($thumbnail);
+                    }
                     $imageArray[$imageId] = $info;
                 }
 
@@ -135,21 +139,7 @@ class ImageController extends Controller
     {
         $request = Yii::$app->request;
         $result = ['status' => false];
-        $fetchData = [
-            'user_id' => Yii::$app->user->getId(),
-            'limit' => 50
-        ];
-        $fetchMediaForm = new FetchImageForm($fetchData);
-        $list = $fetchMediaForm->fetch();
-        $total = $request->get('total');
-        if ($total === null) {
-            $total = $fetchMediaForm->count();    
-        }
         $defaultThumbnail = '150x150';
-        return $this->renderPartial('popup.tpl', ['list' => $list, 'default_thumbnail' => $defaultThumbnail]);
-        // $result['html'] = $this->renderPartial('popup.tpl', ['list' => $list]);
-        // $result['status'] = true;
-        // Yii::$app->response->format = Response::FORMAT_JSON;
-        // return $result;
+        return $this->renderPartial('popup.tpl', ['default_thumbnail' => $defaultThumbnail]);
     }
 }
