@@ -3,21 +3,14 @@
 namespace backend\forms;
 
 use Yii;
-use common\components\override\Form;
+use common\components\override\FetchForm;
 use common\models\User;
 
 /**
  * FetchUserForm
  */
-class FetchUserForm extends Form
+class FetchUserForm extends FetchForm
 {
-    public $order_field = 'id';
-    public $order = 'DESC';
-
-    private $_command;
-    private $_list;
-    private $_total;
-
     public function fetch()
     {
         $command = $this->createCommand();

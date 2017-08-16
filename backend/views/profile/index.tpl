@@ -72,7 +72,8 @@
 			          <div class="form-group">
 			            <div class="col-md-6 col-sm-6 col-xs-12">
 			              <a href='{$links.edit}' role="button">Edit</a> | 
-                    <a href='{$links.password}' role="button">Change Password</a>
+                    <a href='{$links.password}' role="button">Change Password</a> | 
+                    <a href='{$links.transaction}' role="button">Transactions</a>
 			            </div>
 			          </div>
               </div>

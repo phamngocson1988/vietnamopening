@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-14 11:08:36
+/* Smarty version 3.1.31, created on 2017-08-16 10:56:53
   from "C:\xampp\htdocs\vietnamopening\backend\views\profile\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_59916894df33d1_17779580',
+  'unifunc' => 'content_599408d5769345_45665884',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32170ff9472dc265a5a77f7fef2c409cd64e68e3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\vietnamopening\\backend\\views\\profile\\index.tpl',
-      1 => 1502701714,
+      1 => 1502873736,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59916894df33d1_17779580 (Smarty_Internal_Template $_smarty_tpl) {
+function content_599408d5769345_45665884 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="page-title">
   <div class="title_left">
@@ -108,7 +108,9 @@ function content_59916894df33d1_17779580 (Smarty_Internal_Template $_smarty_tpl)
 			              <a href='<?php echo $_smarty_tpl->tpl_vars['links']->value['edit'];?>
 ' role="button">Edit</a> | 
                     <a href='<?php echo $_smarty_tpl->tpl_vars['links']->value['password'];?>
-' role="button">Change Password</a>
+' role="button">Change Password</a> | 
+                    <a href='<?php echo $_smarty_tpl->tpl_vars['links']->value['transaction'];?>
+' role="button">Transactions</a>
 			            </div>
 			          </div>
               </div>

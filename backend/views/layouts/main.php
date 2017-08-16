@@ -55,14 +55,14 @@ AppAsset::register($this);
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <!-- <li><a><i class="fa fa-newspaper-o"></i> Posts <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-newspaper-o"></i> Posts <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?= Url::to(['post/index']) ?>">All Posts</a></li>
                       <li><a href="<?= Url::to(['post/unchecked']) ?>">Unchecked Posts</a></li>
                       <li><a href="<?= Url::to(['post/invalid']) ?>">Invalid Posts</a></li>
                       <li><a href="<?= Url::to(['post/create']) ?>">Create</a></li>
                     </ul>
-                  </li> -->
+                  </li>
 
                   <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -91,6 +91,13 @@ AppAsset::register($this);
                       <li><a href="<?= Url::to(['location/create']) ?>">Create</a></li>
                     </ul>
                   </li>
+
+                  <li><a><i class="fa fa-university" aria-hidden="true"></i> Transactions<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?= Url::to(['transaction/index']) ?>">All</a></li>
+                      <li><a href="<?= Url::to(['transaction/create']) ?>">Create</a></li>
+                    </ul>
+                  </li> 
 
                   <li><a><i class="fa fa-cog"></i> Settings<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -140,6 +147,7 @@ AppAsset::register($this);
                     <li><a href="<?= Url::to(['profile/index']) ?>"> Profile</a></li>
                     <li><a href="<?= Url::to(['profile/edit']) ?>"> Update Account</a></li>
                     <li><a href="<?= Url::to(['profile/password']) ?>"> Change Password</a></li>
+                    <li><a href="<?= Url::to(['profile/transaction']) ?>"> Transactions</a></li>
                     <li><a href="<?= Url::to(['site/logout']) ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>

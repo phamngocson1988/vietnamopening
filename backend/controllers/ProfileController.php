@@ -9,6 +9,8 @@ use yii\helpers\Url;
 use common\forms\EditProfileForm;
 use common\forms\ChangePasswordForm;
 use common\forms\ChangeAvatarForm;
+use common\forms\FetchUserTransactionForm;
+use yii\data\Pagination;
 
 /**
  * ProfileController
@@ -58,6 +60,7 @@ class ProfileController extends Controller
             'password' => Url::to(['profile/password']),
             'edit' => Url::to(['profile/edit']),
             'upload_image' => Url::to(['image/ajax-upload']),
+            'transaction' => Url::to(['profile/transaction']),
         ];
         $this->view->registerJsFile('@web/js/ajax_action.js', ['depends' => [\yii\bootstrap\BootstrapAsset::className()]]);
         return $this->render('index.tpl', [
@@ -110,6 +113,18 @@ class ProfileController extends Controller
         ]);
         
         return $this->renderJson($model->change(), [], $model->getErrors());
+    }
+
+    public function actionTransaction()
+    {
+        $form = new FetchUserTransactionForm();
+        $models = $form->fetch();
+        $total = $form->count();
+        $pages = new Pagination(['totalCount' => $total]);
+        return $this->render('transaction.tpl', [
+            'models' => $models,
+            'pages' => $pages
+        ]);
     }
 
 }

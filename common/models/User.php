@@ -8,6 +8,7 @@ use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use common\models\Image;
 use yii\helpers\ArrayHelper;
+use common\models\UserTransaction;
 
 /**
  * User model
@@ -272,5 +273,24 @@ class User extends ActiveRecord implements IdentityInterface
             self::GENDER_FEMALE => 'Female',
             self::GENDER_MALE => 'Male'
         ];
+    }
+
+    /**
+     * Store history of transaction when user input/output coin
+     *
+     * @param integer $transactionType refer to UserTransaction class
+     * @param integer $amount the number of coin user used
+     * @param string $description describe about the transaction
+     * @param integer $creatorId user id who created this record
+     */
+    public function writeCoinLog($transactionType, $amount, $description, $creatorId)
+    {
+        $coin = new UserTransaction();
+        $coin->user_id = $this->id;
+        $coin->transaction_date = strtotime('now');
+        $coin->transaction_type = $transactionType;
+        $coin->amount = $mount;
+        $coin->description = $description;
+        $coin->created_at = $creatorId;
     }
 }

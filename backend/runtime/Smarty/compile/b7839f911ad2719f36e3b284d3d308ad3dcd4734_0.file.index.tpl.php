@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-14 11:09:26
+/* Smarty version 3.1.31, created on 2017-08-16 05:54:03
   from "C:\xampp\htdocs\vietnamopening\backend\views\image\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_599168c6338718_41751694',
+  'unifunc' => 'content_5993c1db92dcd8_71940810',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7839f911ad2719f36e3b284d3d308ad3dcd4734' => 
     array (
       0 => 'C:\\xampp\\htdocs\\vietnamopening\\backend\\views\\image\\index.tpl',
-      1 => 1502701762,
+      1 => 1502702686,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_599168c6338718_41751694 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5993c1db92dcd8_71940810 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="clearfix"></div>
@@ -88,7 +88,6 @@ ob_start();
       },
     });
   });
-
 
   // Copy
   $("#items").on('click', 'a.copy', function(e){
