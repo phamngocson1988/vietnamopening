@@ -15,6 +15,7 @@ use common\forms\ChangePasswordForm;
 use common\forms\ChangeAvatarForm;
 use yii\web\Response;
 use common\forms\FetchPostForm;
+use common\models\User;
 
 /**
  * UserController
@@ -85,5 +86,32 @@ class UserController extends Controller
             'model' => $model,
         ]);
 
+    }
+
+    public function actionSuggestion()
+    {
+        $request = Yii::$app->request;
+        if (!$request->isAjax) {
+            return;
+        }
+        
+        $term = $request->get('term');
+        $field = $request->get('field');
+        $models = User::find()->where(['like', $field, $term])->all();
+        $data = [];
+        foreach ($models as $model) {
+            $row = [];
+            $row['data'] = $model->id;
+            $row['value'] = $model->$field;
+            $row['id'] = $model->id;
+            $row['name'] = $model->name;
+            $row['email'] = $model->email;
+            $row['username'] = $model->username;
+            $row['phone'] = $model->phone;
+            $row['address'] = $model->address;
+            $data[] = $row;
+        }
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        return ['suggestions' => $data];
     }
 }

@@ -6,7 +6,7 @@
         <div class="tools tools-bottom">
           <a href="{$model->getUrl('150x150')}" target="_blank" class="copy"><i class="fa fa-files-o"></i></a>
           <a href="{$model->getUrl()}" target="_blank"><i class="fa fa-link"></i></a>
-          <!-- <a href="{url route='image/ajax-delete' id=$model->getId()}" class="delete"><i class="fa fa-times"></i></a> -->
+          <a href="{url route='image/ajax-delete' id=$model->getId()}" class="delete"><i class="fa fa-times"></i></a>
         </div>
       </div>
     </div>

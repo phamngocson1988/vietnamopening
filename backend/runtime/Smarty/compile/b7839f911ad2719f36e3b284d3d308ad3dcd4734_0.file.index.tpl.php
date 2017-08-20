@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-16 05:54:03
+/* Smarty version 3.1.31, created on 2017-08-16 11:11:35
   from "C:\xampp\htdocs\vietnamopening\backend\views\image\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5993c1db92dcd8_71940810',
+  'unifunc' => 'content_59940c47dd0980_09921512',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7839f911ad2719f36e3b284d3d308ad3dcd4734' => 
     array (
       0 => 'C:\\xampp\\htdocs\\vietnamopening\\backend\\views\\image\\index.tpl',
-      1 => 1502702686,
+      1 => 1502874694,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5993c1db92dcd8_71940810 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59940c47dd0980_09921512 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="clearfix"></div>
@@ -69,25 +69,7 @@ ob_start();
 	});
 
   // delete
-  $('#items').on("click", '.delete', function(event) { 
-    event.preventDefault()
-    var _i = $(this).closest('.image-item').data('id');
-    var _href = $(this).attr('href');
-    that = this;
-    $.ajax({
-      url: _href,
-      type: "GET",
-      dataType: 'json',
-      success: function (result, textStatus, jqXHR) {
-          if (result.status == false) {
-            alert(result.error);
-          } else {
-            $(that).closest('.image-item').detach();
-          }
-          
-      },
-    });
-  });
+  new AjaxDeleteAction({control: '.delete', container: '#items', item: '.image-item'});
 
   // Copy
   $("#items").on('click', 'a.copy', function(e){

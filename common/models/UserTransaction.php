@@ -12,7 +12,9 @@ use common\models\User;
  * @property integer $user_id
  * @property integer $transaction_date
  * @property integer $transaction_type
- * @property integer $amount
+ * @property integer $money
+ * @property integer $coin
+ * @property integer $promotion
  * @property string $description
  * @property string $created_by
  */
@@ -79,5 +81,29 @@ class UserTransaction extends \yii\db\ActiveRecord
             return $user->name;
         }
         return '';
+    }
+
+    public function getMoney($format = false)
+    {
+        if ($format === true) {
+            return number_format((int)$this->money);
+        }
+        return (int)$this->money;
+    }
+
+    public function getCoin($format = false)
+    {
+        if ($format === true) {
+            return number_format((int)$this->coin);
+        }
+        return (int)$this->coin;
+    }
+
+    public function getPromotion($format = false)
+    {
+        if ($format === true) {
+            return number_format((int)$this->promotion);
+        }
+        return (int)$this->promotion;
     }
 }

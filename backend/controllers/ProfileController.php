@@ -121,9 +121,11 @@ class ProfileController extends Controller
         $models = $form->fetch();
         $total = $form->count();
         $pages = new Pagination(['totalCount' => $total]);
+        $offset = $pages->getOffset();
         return $this->render('transaction.tpl', [
             'models' => $models,
-            'pages' => $pages
+            'pages' => $pages,
+            'offset' => $offset
         ]);
     }
 

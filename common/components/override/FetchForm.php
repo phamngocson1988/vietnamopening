@@ -37,7 +37,7 @@ class FetchForm extends Model
 	{
 		$page = $this->getPage();
 		$pageSize = $this->getPageSize();
-		$offset = ($page - 1) * $pageSize;
+		return ($page - 1) * $pageSize;
 	}
 
 	public function setPagination($command) 

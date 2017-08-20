@@ -34,25 +34,7 @@
 	});
 
   // delete
-  $('#items').on("click", '.delete', function(event) { 
-    event.preventDefault()
-    var _i = $(this).closest('.image-item').data('id');
-    var _href = $(this).attr('href');
-    that = this;
-    $.ajax({
-      url: _href,
-      type: "GET",
-      dataType: 'json',
-      success: function (result, textStatus, jqXHR) {
-          if (result.status == false) {
-            alert(result.error);
-          } else {
-            $(that).closest('.image-item').detach();
-          }
-          
-      },
-    });
-  });
+  new AjaxDeleteAction({control: '.delete', container: '#items', item: '.image-item'});
 
   // Copy
   $("#items").on('click', 'a.copy', function(e){

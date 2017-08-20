@@ -124,15 +124,7 @@ class ImageController extends Controller
             return;
         }
         $model = new DeleteImageForm(['id' => $id]);
-        
-        if ($model->delete()) {
-            $result['status'] = true;
-        } else {
-            $result['status'] = false;
-            $result['error'] = $model->getErrors();
-        }
-        Yii::$app->response->format = Response::FORMAT_JSON;
-        return $result;
+        return $this->renderJson($model->delete(), [], $model->getErrors());
     }
 
     public function actionPopup()

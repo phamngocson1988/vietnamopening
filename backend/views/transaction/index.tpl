@@ -17,11 +17,11 @@
             <thead>
               <tr class="headings">
                 <th class="column-title">No </th>
-                <th class="column-title">Date </th>
-                <th class="column-title">Type </th>
+                <th class="column-title">Customer Name </th>
                 <th class="column-title">Money </th>
                 <th class="column-title">Coin </th>
                 <th class="column-title">Promotion </th>
+                <th class="column-title">Created Date </th>
                 <th class="column-title">Description </th>
               </tr>
             </thead>
@@ -30,11 +30,11 @@
               {foreach $models as $no => $model}
               <tr class="even pointer">
                 <td class=" ">{$no + 1 + $offset}</td>
+                <td class=" ">{$model->getUserName()}</td>
+                <td class=" ">{$model->money}</td>
+                <td class=" ">{$model->coin}</td>
+                <td class=" ">{$model->promotion}</td>
                 <td class=" ">{$model->getTransactionDate(true)}</td>
-                <td class=" ">{$model->getTransactionType()}</td>
-                <td class=" ">{$model->getMoney(true)}</td>
-                <td class=" ">{$model->getCoin(true)}</td>
-                <td class=" ">{$model->getPromotion(true)}</td>
                 <td class=" ">{$model->description}</td>
               </tr>
               {/foreach}
@@ -50,3 +50,8 @@
     </div>
   </div>
 </div>
+
+{registerJs}
+{literal}
+{/literal}
+{/registerJs}

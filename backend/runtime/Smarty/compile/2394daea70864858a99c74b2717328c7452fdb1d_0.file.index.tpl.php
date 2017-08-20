@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-08-10 05:47:22
+/* Smarty version 3.1.31, created on 2017-08-17 06:39:17
   from "C:\xampp\htdocs\vietnamopening\backend\views\category\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_598bd74a48b1b5_75201476',
+  'unifunc' => 'content_59951df57001f1_47779379',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2394daea70864858a99c74b2717328c7452fdb1d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\vietnamopening\\backend\\views\\category\\index.tpl',
-      1 => 1502336810,
+      1 => 1502859801,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_598bd74a48b1b5_75201476 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59951df57001f1_47779379 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="clearfix"></div>
 <div class="row">
